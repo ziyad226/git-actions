@@ -4,17 +4,12 @@ on:
       - master
 
 
-
 jobs:
   build:
-    runs-on: ubuntu-latest 
-
+    runs-on: ubuntu-latest
+ 
     steps:
-      - name: "before printing the folder containts"
-        run: ls
-
       - uses: actions/checkout@v3
 
-      - name: "after printing the folder containts"
-        run: ls -a
-
+      - name: " login to dockerhub"
+        run: docker login --username ${{ secrets.DOCKER_USERNAME}} --password ${{ secrets.DOCKER_TOKEN }}
