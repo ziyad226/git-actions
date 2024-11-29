@@ -13,7 +13,7 @@ jobs:
       - name: "before printing the folder containts"
         run: ls
 
-           - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: "after printing the folder containts"
         run: ls -a
